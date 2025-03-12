@@ -5,6 +5,15 @@ import { Menu, X } from "lucide-react";
 import Image from 'next/image';
 import logo from "../../../../public/Image/initial-linked-letter-ig-logo-design-vector-37373333.jpg"
 import './navbar.module.css'
+import { FaPagelines, FaInfoCircle, FaCogs, FaProjectDiagram, FaPhone } from "react-icons/fa"; // استيراد الأيقونات
+
+const menuItems = [
+  { name: "الصفحة الرئيسية", icon: <FaPagelines /> },
+  { name: "من نحن", icon: <FaInfoCircle /> },
+  { name: "الخدمات", icon: <FaCogs /> },
+  { name: "المشاريع", icon: <FaProjectDiagram /> },
+  { name: "اتصل بنا", icon: <FaPhone /> }
+];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,23 +54,24 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <motion.div 
-          className="cairo mt-5 md:hidden absolute top-16 left-0 w-full bg-purple-800 bg-opacity-90 text-white flex flex-col items-center space-y-20 py-6"
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: "0%", opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          { ["الصفحة الرئيسية", "من نحن", "الخدمات", "المشاريع", "اتصل بنا"].map((item, index) => (
-            <a 
-              key={index} 
-              href={`#${item.toLowerCase()}`} 
-              className="text-lg hover:text-gray-300 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
-        </motion.div>
+       <motion.div 
+       className="cairo mt-6 md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-gray-900 bg-opacity-90 text-white flex flex-col items-center space-y-6 py-6"
+       initial={{ x: "100%", opacity: 0 }}
+       animate={{ x: "0%", opacity: 1 }}
+       transition={{ duration: 0.5, ease: "easeInOut" }}
+     >
+       {menuItems.map((item, index) => (
+         <a 
+           key={index} 
+           href={`#${item.name.toLowerCase()}`} 
+           className="flex items-center gap-2 text-lg hover:text-gray-300 transition duration-300 mb-[50px]"
+           onClick={() => setIsOpen(false)}
+         >
+           <span className="text-gray-400 text-xl">{item.icon}</span>
+           {item.name}
+         </a>
+       ))}
+     </motion.div>
       )}
     </nav>
   );
