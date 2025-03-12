@@ -9,9 +9,10 @@ import "swiper/css/pagination";
 
 import img1 from "../../public/Image/logoo.jpg";
 import img2 from "../../public/Image/logo2.jpg";
+import img3 from "../../public/Image/pic_extended.jpg";
 
 
-const images = [img1, img2];
+const images = [img1, img2,img3];
 
 const desc = [
   { 
