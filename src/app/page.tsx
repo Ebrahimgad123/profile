@@ -35,7 +35,7 @@ export default function Home() {
           spaceBetween={0}
           slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           navigation={true}
           pagination={{ clickable: true }}
           className="rounded-xl shadow-lg border-2 border-blue-400 touch-pan-y h-90 sm:h-100 md:h-80 lg:h-96"
