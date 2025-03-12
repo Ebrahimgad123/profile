@@ -12,7 +12,7 @@ import img1 from "../../../public/Image/logoo.jpg";
 import img2 from "../../../public/Image/logo2.jpg";
 import img3 from "../../../public/Image/pic_extended.jpg";
 import Navbar from "../components/Navbar/page";
-
+import Services from  "../services/page"
 
 const images = [img1, img2,img3];
 
@@ -73,6 +73,9 @@ const page = () => {
     </div>
     <div >
     <Cv/>
+    </div>
+    <div>
+     <Services/>   
     </div>
      </div>
   )
