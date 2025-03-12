@@ -57,7 +57,7 @@ export default function Home() {
       {desc.map((item, index) => (
         <motion.div
           key={index}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-gradient-to-r from-purple-800 to-gray-950 rounded-2xl shadow-lg text-white p-6 text-sm sm:text-lg font-semibold leading-relaxed"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-gradient-to-r from-purple-800 to-gray-800 rounded-2xl shadow-lg text-white p-6 text-sm sm:text-lg font-semibold leading-relaxed"
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: "0%", opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
