@@ -77,7 +77,7 @@ const Page = () => {
           <motion.div
           key={index}
           className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center hover:scale-105 transition-transform duration-300"
-          initial={{ opacity: 0, x: -100 }}  
+          initial={{ opacity: 0, x: -10 }}  
           whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, delay: index * 0.15 }}
