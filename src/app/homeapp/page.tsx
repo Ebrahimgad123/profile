@@ -69,7 +69,7 @@ const Page = () => {
    animate={{ x: "0%", opacity: 1 }}
    transition={{ duration: 1.5, ease: "easeInOut" }}
  >
-   <p className="font-[Cairo] leading-relaxed text-sm sm:text-base">
+   <bdi className="font-[Cairo] leading-relaxed text-sm sm:text-base">
      {expanded ? item.text : item.text.substring(0, 400)}
      <button 
        onClick={() => setExpanded(!expanded)}
@@ -77,7 +77,7 @@ const Page = () => {
      >
        {expanded ? "عرض أقل" : "...عرض المزيد"}
      </button>
-   </p>
+   </bdi>
  </motion.div>
  
     
