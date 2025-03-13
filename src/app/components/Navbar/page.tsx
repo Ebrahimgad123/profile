@@ -5,8 +5,7 @@ import { Menu, X } from "lucide-react";
 import Image from 'next/image';
 import logo from "../../../../public/Image/initial-linked-letter-ig-logo-design-vector-37373333.jpg"
 import './navbar.module.css'
-import { FaPagelines, FaInfoCircle, FaCogs, FaProjectDiagram, FaPhone } from "react-icons/fa"; // استيراد الأيقونات
-
+import { FaPagelines, FaInfoCircle, FaCogs, FaProjectDiagram, FaPhone } from "react-icons/fa";
 const menuItems = [
   { name: "الصفحة الرئيسية", icon: <FaPagelines /> },
   { name: "من نحن", icon: <FaInfoCircle /> },
