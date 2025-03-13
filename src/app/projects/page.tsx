@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, image }) => {
         transition={{ duration: 0.8 }}
       />
       <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-gray-400 mt-2">{description}</p>
+      <p className="text-gray-400 mt-2 cairo">{description}</p>
       <div className="mt-4 flex gap-4">
         <motion.a
           href="#"
@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, image }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          Demo <MdEmojiPeople />
+          Live <MdEmojiPeople />
         </motion.a>
         <motion.a
           href="#"
@@ -55,40 +55,40 @@ const Projects: React.FC = () => {
   const projects: ProjectProps[] = [
     {
       title: "E_commerce app",
-      description: "A great project about tech",
+      description: "تطبيق تجارة إلكترونية متكامل يهدف إلى تحسين تجربة التسوق عبر الإنترنت باستخدام أحدث التقنيات",
       image:
         "https://5.imimg.com/data5/SELLER/Default/2023/5/312281422/DM/CL/ZE/190312336/ecommerce-website-500x500.png",
     },
     {
       title: "Real Estate",
-      description: "An innovative solution for business",
+      description: "حل رقمي مبتكر يساعد الشركات العقارية في إدارة العقارات وعرضها بطريقة احترافية وجذابة",
       image:
         "https://img.freepik.com/free-vector/flat-design-real-estate-project-landing-page_23-2149763404.jpg",
     },
     {
       title: "Trav mate",
-      description: "A creative and dynamic app",
+      description: "تطبيق سياحي إبداعي يوفر تجربة سفر سلسة، من التخطيط إلى الحجز والاستكشاف",
       image:
         "https://img.freepik.com/free-vector/travel-landing-page-with-photo_23-2148360912.jpg",
     },
     {
       title: "Foodie Finder",
       description:
-        "Discover the best restaurants around you with real-time reviews and recommendations.",
+        "اكتشف أفضل المطاعم من حولك مع تقييمات وتوصيات حقيقية في الوقت الفعلي",
       image:
         "https://mir-s3-cdn-cf.behance.net/projects/404/e987e841529487.Y3JvcCw2NTEsNTA5LDI1MCww.png",
     },
     {
       title: "FitTrack",
       description:
-        "A smart fitness companion to help you track your workouts and stay in shape.",
+        "رفيقك الذكي في اللياقة البدنية لمساعدتك على تتبع تمارينك والحفاظ على لياقتك",
       image:
         "https://img.freepik.com/free-vector/sport-landing-page-template-with-photo_23-2148216851.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
     },
     {
       title: "BookNest",
       description:
-        "A community-driven app for book lovers to find and share great reads.",
+        "تطبيق مجتمعي لعشاق الكتب يتيح لك استكشاف ومشاركة أفضل الكتب.",
       image:
         "https://img.freepik.com/free-psd/realistic-landing-page-education-template-design_23-2149361010.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
     },
