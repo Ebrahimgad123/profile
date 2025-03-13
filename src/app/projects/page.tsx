@@ -57,40 +57,40 @@ const Projects: React.FC = () => {
       title: "E_commerce app",
       description: "A great project about tech",
       image:
-        "https://img.freepik.com/free-vector/shopping-cart-with-bags-gifts-concept-illustration_114360-18775.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2023/5/312281422/DM/CL/ZE/190312336/ecommerce-website-500x500.png",
     },
     {
       title: "Real Estate",
       description: "An innovative solution for business",
       image:
-        "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?cs=srgb&dl=pexels-davidmcbee-1546168.jpg&fm=jpg",
+        "https://img.freepik.com/free-vector/flat-design-real-estate-project-landing-page_23-2149763404.jpg",
     },
     {
       title: "Trav mate",
       description: "A creative and dynamic app",
       image:
-        "https://t4.ftcdn.net/jpg/00/65/48/25/360_F_65482539_C0ZozE5gUjCafz7Xq98WB4dW6LAhqKfs.jpg",
+        "https://img.freepik.com/free-vector/travel-landing-page-with-photo_23-2148360912.jpg",
     },
     {
       title: "Foodie Finder",
       description:
         "Discover the best restaurants around you with real-time reviews and recommendations.",
       image:
-        "https://media.istockphoto.com/id/1157500038/photo/group-of-friends-taking-pictures-of-food-on-the-table-with-smartphones-during-party.jpg?s=612x612&w=0&k=20&c=xzKLQZhGWcz479V419x2sUqh0fuIZcleFeSDXqytj1M=",
+        "https://mir-s3-cdn-cf.behance.net/projects/404/e987e841529487.Y3JvcCw2NTEsNTA5LDI1MCww.png",
     },
     {
       title: "FitTrack",
       description:
         "A smart fitness companion to help you track your workouts and stay in shape.",
       image:
-        "https://media.istockphoto.com/id/1322158059/photo/dumbbell-water-bottle-towel-on-the-bench-in-the-gym.jpg?s=612x612&w=0&k=20&c=CIdh6LPGwU6U6lbvKCdd7LcppidaYwcDawXJI-b0yGE=",
+        "https://img.freepik.com/free-vector/sport-landing-page-template-with-photo_23-2148216851.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
     },
     {
       title: "BookNest",
       description:
         "A community-driven app for book lovers to find and share great reads.",
       image:
-        "https://media.licdn.com/dms/image/v2/D5612AQHNpwpmQUbs4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1693191924581?e=2147483647&v=beta&t=7RLT6SNvP3Jjs7W2E8AGL6mjVomEr0oRF6OPHO2P1GY",
+        "https://img.freepik.com/free-psd/realistic-landing-page-education-template-design_23-2149361010.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
     },
   ];
 
