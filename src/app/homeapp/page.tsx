@@ -13,8 +13,8 @@ import img1 from "../../../public/Image/logoo.jpg";
 import img2 from "../../../public/Image/logo2.jpg";
 import img3 from "../../../public/Image/pic_extended.jpg";
 import Navbar from "../components/Navbar/page";
-import Services from "../../app/services/page";
-
+import Services from "../projects/page";
+import Technology from "../tecnology/page"
 const images = [img1, img2, img3];
 
 const desc = [
@@ -89,6 +89,9 @@ const Page = () => {
       </div>
       <div>
         <Services />
+      </div>
+      <div>
+        <Technology />
       </div>
     </div>
   );
