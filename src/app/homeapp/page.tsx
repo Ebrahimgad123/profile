@@ -62,23 +62,24 @@ const Page = () => {
         </motion.div>
 
         {desc.map((item, index) => (
-      <motion.div
-      key={index}
-      className="w-full max-w-2xl bg-gradient-to-r from-purple-800 to-gray-800 rounded-2xl shadow-lg text-white p-8 text-lg sm:text-xl font-semibold text-right"
-      initial={{ x: "100%", opacity: 0 }}
-      animate={{ x: "0%", opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
-    >
-      <p className="font-[Cairo] w-full ">
-        {expanded ? item.text : item.text.substring(0, 400) }
-        <button 
-          onClick={() => setExpanded(!expanded)}
-          className="text-yellow-300 inline-block"
-        >
-          {expanded ? "عرض أقل" : "...عرض المزيد"}
-        </button>
-      </p>
-    </motion.div>
+   <motion.div
+   key={index}
+   className="w-full max-w-2xl bg-gradient-to-r from-purple-800 to-gray-800 rounded-2xl shadow-lg text-white p-8 text-base sm:text-lg font-semibold text-right"
+   initial={{ x: "100%", opacity: 0 }}
+   animate={{ x: "0%", opacity: 1 }}
+   transition={{ duration: 1.5, ease: "easeInOut" }}
+ >
+   <p className="font-[Cairo] leading-relaxed text-sm sm:text-base">
+     {expanded ? item.text : item.text.substring(0, 400)}
+     <button 
+       onClick={() => setExpanded(!expanded)}
+       className="text-yellow-300 text-sm sm:text-base ml-1"
+     >
+       {expanded ? "عرض أقل" : "...عرض المزيد"}
+     </button>
+   </p>
+ </motion.div>
+ 
     
         ))}
       </div>
