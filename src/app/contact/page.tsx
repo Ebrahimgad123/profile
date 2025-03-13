@@ -7,7 +7,7 @@ const Contact = () => {
      
       <p className="text-lg text-center mb-8 cairo">
       <span>📩</span>
-       <bdi>هل لديك أي استفسار أو اقتراح؟ لا تتردد في التواصل معنا!</bdi>
+       <bdi>هل لديك أي استفسار أو اقتراح؟ لا تتردد في التواصل معى!</bdi>
       </p>
       
       <div className="bg-white bg-opacity-20 p-6 rounded-xl shadow-lg w-full max-w-lg mb-5">
@@ -33,11 +33,11 @@ const Contact = () => {
         </form>
       </div>
       <div className=" w-full text-center flex flex-col justify-center items-center bg-gray-900 text-white p-6 mt-5 mb-[20px]">
-      <p className="text-4xl font-bold mb-6 font-serif">📞 تواصل معنا </p>
+      <p className="text-4xl font-bold mb-6 font-serif">📞 تواصل معى </p>
 
       
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg text-center">
-        <p className="text-lg mb-4 cairo">يمكنك الاتصال بنا عبر الرقم التالي:</p>
+        <p className="text-lg mb-4 cairo">يمكنك الاتصال بى عبر الرقم التالي:</p>
         <a 
           href="tel:+201234567890" 
           className="text-green-400 hover:text-green-300 underline text-xl font-semibold"
