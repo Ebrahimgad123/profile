@@ -75,7 +75,7 @@ const Page = () => {
        onClick={() => setExpanded(!expanded)}
        className="text-yellow-300 text-sm sm:text-base ml-1"
      >
-       {expanded ? "عرض أقل" : "...عرض المزيد"}
+       {expanded ? "عرض أقل" : "عرض المزيد..."}
      </button>
    </bdi>
  </motion.div>
