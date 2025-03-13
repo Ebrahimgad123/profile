@@ -15,6 +15,7 @@ import img3 from "../../../public/Image/pic_extended.jpg";
 import Navbar from "../components/Navbar/page";
 import Services from "../projects/page";
 import Technology from "../tecnology/page"
+import Contact from "../contact/page"
 const images = [img1, img2, img3];
 
 const desc = [
@@ -29,7 +30,7 @@ const Page = () => {
   return (
     <div>
       <Navbar />
-      <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-8 p-6 sm:p-10 bg-gradient-to-br from-[#374151] to-purple-600">
+      <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-8 p-6 sm:p-10 bg-gradient-to-br bg-purple-600">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -92,6 +93,9 @@ const Page = () => {
       </div>
       <div>
         <Technology />
+      </div>
+      <div>
+        <Contact />
       </div>
     </div>
   );
