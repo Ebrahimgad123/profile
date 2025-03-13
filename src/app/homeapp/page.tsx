@@ -69,13 +69,13 @@ const Page = () => {
       animate={{ x: "0%", opacity: 1 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
     >
-      <p className="font-[Cairo] w-full">
-        {expanded ? item.text : item.text.substring(0, 400) + "..."}
+      <p className="font-[Cairo] w-full ">
+        {expanded ? item.text : item.text.substring(0, 400) }
         <button 
           onClick={() => setExpanded(!expanded)}
-          className="text-yellow-300 text-left"
+          className="text-yellow-300 inline-block"
         >
-          {expanded ? "عرض أقل" : "عرض المزيد"}
+          {expanded ? "عرض أقل" : "...عرض المزيد"}
         </button>
       </p>
     </motion.div>
