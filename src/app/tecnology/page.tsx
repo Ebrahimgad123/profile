@@ -77,8 +77,8 @@ const Page = () => {
           <motion.div
           key={index}
           className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center hover:scale-105 transition-transform duration-300"
-          initial={{ opacity: 0, x: 100 }}  // يبدأ من اليسار (-100px)
-          whileInView={{ opacity: 1, x: 0 }} // يتحرك لليمين (إلى مكانه الطبيعي)
+          initial={{ opacity: 0, x: -100 }}  
+          whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, delay: index * 0.15 }}
         >
