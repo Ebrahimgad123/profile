@@ -18,9 +18,9 @@ import Services from "../../app/services/page";
 const images = [img1, img2, img3];
 
 const desc = [
-  { 
-    text: "أنا إبراهيم جاد اعمل كمطور برمجيات متخصص في بناء تطبيقات الويب وتطبيقات الموبايل، حيث أركز على تقديم حلول تقنية متكاملة تجمع بين الأداء العالي وتجربة المستخدم المتميزة. أمتلك خبرة في تطوير الواجهات التفاعلية باستخدام React.js، مع الاستفادة من Framer Motion لإضافة تأثيرات سلسة وديناميكية. في جانب البنية الخلفية، أعمل باستخدام Node.js و Express.js لتطوير أنظمة قوية وقابلة للتوسع، مع الاعتماد على MongoDB كقاعدة بيانات مرنة وفعالة. كما أنني أحرص على تحسين الأداء وتعزيز كفاءة التطبيقات باستخدام Next.js، وأمتلك خبرة في التكامل مع RESTful APIs و GraphQL لضمان تدفق البيانات بسلاسة. شغفي يتمحور حول تطوير برمجيات مبتكرة تلبي احتياجات المستخدمين وتواكب أحدث التطورات في عالم التكنولوجيا."
-  }
+  {
+    text: "أنا إبراهيم جاد اعمل كمطور برمجيات متخصص في بناء تطبيقات الويب وتطبيقات الموبايل، حيث أركز على تقديم حلول تقنية متكاملة تجمع بين الأداء العالي وتجربة المستخدم المتميزة. أمتلك خبرة في تطوير الواجهات التفاعلية باستخدام React.js، مع الاستفادة من Framer Motion لإضافة تأثيرات سلسة وديناميكية. في جانب البنية الخلفية، أعمل باستخدام Node.js و Express.js لتطوير أنظمة قوية وقابلة للتوسع، مع الاعتماد على MongoDB كقاعدة بيانات مرنة وفعالة. كما أنني أحرص على تحسين الأداء وتعزيز كفاءة التطبيقات باستخدام Next.js، وأمتلك خبرة في التكامل مع RESTful APIs و GraphQL لضمان تدفق البيانات بسلاسة. شغفي يتمحور حول تطوير برمجيات مبتكرة تلبي احتياجات المستخدمين وتواكب أحدث التطورات في عالم التكنولوجيا.",
+  },
 ];
 
 const Page = () => {
@@ -47,7 +47,10 @@ const Page = () => {
             className="rounded-xl shadow-lg border-2 border-blue-400 touch-pan-y h-90 sm:h-100 md:h-80 lg:h-96"
           >
             {images.map((img, index) => (
-              <SwiperSlide key={index} className="flex items-center justify-center">
+              <SwiperSlide
+                key={index}
+                className="flex items-center justify-center"
+              >
                 <Image
                   src={img}
                   alt={`Slide ${index + 1}`}
@@ -62,28 +65,25 @@ const Page = () => {
         </motion.div>
 
         {desc.map((item, index) => (
-   <motion.div
-   key={index}
-   className="w-full max-w-2xl bg-gradient-to-r from-purple-800 to-gray-800 rounded-2xl shadow-lg text-white p-8 text-base sm:text-lg font-semibold text-right"
-   initial={{ x: "100%", opacity: 0 }}
-   animate={{ x: "0%", opacity: 1 }}
-   transition={{ duration: 1.5, ease: "easeInOut" }}
- >
-   <bdi className="font-[Cairo] leading-relaxed text-sm sm:text-base">
-     {expanded ? item.text : item.text.substring(0, 400)}
-     <button 
-       onClick={() => setExpanded(!expanded)}
-       className="text-yellow-300 text-sm sm:text-base ml-1"
-     >
-       {expanded ? "عرض أقل" : "عرض المزيد..."}
-     </button>
-   </bdi>
- </motion.div>
- 
-    
+          <motion.div
+            key={index}
+            className="w-full max-w-2xl bg-gradient-to-r from-purple-800 to-gray-800 rounded-2xl shadow-lg text-white p-8 text-base sm:text-lg font-semibold text-right"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            <bdi className="font-[Cairo] leading-relaxed text-sm sm:text-base">
+              {expanded ? item.text : item.text.substring(0, 400)}
+              <button
+                onClick={() => setExpanded(!expanded)}
+                className="text-yellow-300 text-sm sm:text-base ml-1"
+              >
+                {expanded ? "عرض أقل" : "عرض المزيد..."}
+              </button>
+            </bdi>
+          </motion.div>
         ))}
       </div>
-
       <div>
         <Cv />
       </div>

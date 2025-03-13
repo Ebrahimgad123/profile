@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Home from "../app/homeapp/page"
+
 const Loader = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
@@ -24,6 +25,7 @@ const Loader = () => {
           transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
         ></motion.span>
       </motion.div>
+     
     </div>
   );
 };
