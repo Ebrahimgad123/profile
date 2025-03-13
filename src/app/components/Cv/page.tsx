@@ -5,7 +5,7 @@ const Page = () => {
     <main className="flex justify-center items-center h-[150px] bg-gradient-to-br bg-purple-600 ">
       <button 
         type="button" 
-        className="bg-red-500 text-white font-semibold px-10 py-5 rounded-md shadow-md hover:bg-red-700 transition duration-300 flex items-center"
+        className="bg-yellow-600 text-white font-semibold px-10 py-5 rounded-md shadow-md hover:bg-red-700 transition duration-300 flex items-center"
       >
         Download CV <IoCloudDownloadOutline color='white'size={22}/>
       </button>
