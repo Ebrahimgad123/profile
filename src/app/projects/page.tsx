@@ -3,16 +3,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { MdEmojiPeople } from "react-icons/md";
+
 interface ProjectProps {
   title: string;
   description: string;
   image: string;
+  liveLink: string;
+  githubLink: string;
 }
 
-const ProjectCard: React.FC<ProjectProps> = ({ title, description, image }) => {
+const ProjectCard: React.FC<ProjectProps> = ({ title, description, image, liveLink, githubLink }) => {
   return (
     <motion.div
-      className="bg-gray-800 text-white p-4 rounded-lg shadow-lg "
+      className="bg-gray-800 text-white p-4 rounded-lg shadow-lg"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}
@@ -31,16 +34,20 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, image }) => {
       <p className="text-gray-400 mt-2 cairo">{description}</p>
       <div className="mt-4 flex gap-4">
         <motion.a
-          href="#"
-          className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition flex items-center"
+          href={liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition flex items-center gap-2"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           Live <MdEmojiPeople />
         </motion.a>
         <motion.a
-          href="#"
-          className="bg-gray-700 px-4 py-2 rounded-lg text-white hover:bg-gray-600 transition flex items-center"
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-700 px-4 py-2 rounded-lg text-white hover:bg-gray-600 transition flex items-center gap-2"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -54,44 +61,49 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, image }) => {
 const Projects: React.FC = () => {
   const projects: ProjectProps[] = [
     {
-      title: "E_commerce app",
-      description: "تطبيق تجارة إلكترونية متكامل يهدف إلى تحسين تجربة التسوق عبر الإنترنت باستخدام أحدث التقنيات",
-      image:
-        "https://5.imimg.com/data5/SELLER/Default/2023/5/312281422/DM/CL/ZE/190312336/ecommerce-website-500x500.png",
+      title: "TravMate",
+      description: "تطبيق سياحي يوفر تجربة سفر سلسة، من التخطيط إلى الحجز والاستكشاف.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742361514/into4_dolhwo.png",
+      liveLink: "https://front-graduation.vercel.app/",
+      githubLink: "https://github.com/Ebrahimgad123/front-graduation",
     },
     {
-      title: "Real Estate",
-      description: "حل رقمي مبتكر يساعد الشركات العقارية في إدارة العقارات وعرضها بطريقة احترافية وجذابة",
-      image:
-        "https://img.freepik.com/free-vector/flat-design-real-estate-project-landing-page_23-2149763404.jpg",
+      title: "Medical App",
+      description: "تطبيق طبي متطور يساعد المستخدمين على الوصول إلى الخدمات الصحية بسهولة.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742362248/into6_ocmffk.png",
+      liveLink: "https://medical-app-theta-eight.vercel.app/",
+      githubLink: "https://github.com/Ebrahimgad123/medical-app",
+    },    
+    {
+      title: "Hotel Booking",
+      description: "تطبيق يساعد على حجز الفنادق بسهولة وإدارة العقارات بطريقة احترافية.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742361827/into5_cmriol.png",
+      liveLink: "https://hotel-full-stack.vercel.app",
+      githubLink: "https://github.com/Ebrahimgad123/hotel-frontend",
     },
     {
-      title: "Trav mate",
-      description: "تطبيق سياحي إبداعي يوفر تجربة سفر سلسة، من التخطيط إلى الحجز والاستكشاف",
-      image:
-        "https://img.freepik.com/free-vector/travel-landing-page-with-photo_23-2148360912.jpg",
+      title: "E_Stores",
+      description: "منصة تجارة إلكترونية متطورة تتيح للمستخدمين شراء وبيع المنتجات بسهولة وأمان.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742364105/into8_oeowku.png",
+      liveLink: "https://ecommerce-teamproject.vercel.app/",
+      githubLink: "https://github.com/Ebrahimgad123/Ecommerce",
+    },
+    
+    {
+      title: "Cruds Pure javascript",
+      description: "تطبيق ذكي يساعدك على تتبع تمارينك والحفاظ على لياقتك.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742362548/into7_m6mlmk.png",
+      liveLink: "https://ebrahimgad123.github.io/cruds-PureJavascript/",
+      githubLink: "https://github.com/Ebrahimgad123/cruds-PureJavascript",
     },
     {
-      title: "Foodie Finder",
-      description:
-        "اكتشف أفضل المطاعم من حولك مع تقييمات وتوصيات حقيقية في الوقت الفعلي",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/projects/404/e987e841529487.Y3JvcCw2NTEsNTA5LDI1MCww.png",
+      title: "Maze solving",
+      description: "تطبيق ذكاء اصطناعي لحل المتاهات باستخدام خوارزميات متقدمة لتحليل المسارات والعقبات.",
+      image: "https://res.cloudinary.com/dxisw9tzp/image/upload/v1742364303/into9_do6n87.png",
+      liveLink: "https://ebrahimgad123.github.io/maze-solving/",
+      githubLink: "https://github.com/Ebrahimgad123/maze-solving",
     },
-    {
-      title: "FitTrack",
-      description:
-        "رفيقك الذكي في اللياقة البدنية لمساعدتك على تتبع تمارينك والحفاظ على لياقتك",
-      image:
-        "https://img.freepik.com/free-vector/sport-landing-page-template-with-photo_23-2148216851.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
-    },
-    {
-      title: "BookNest",
-      description:
-        "تطبيق مجتمعي لعشاق الكتب يتيح لك استكشاف ومشاركة أفضل الكتب.",
-      image:
-        "https://img.freepik.com/free-psd/realistic-landing-page-education-template-design_23-2149361010.jpg?ga=GA1.1.1269071055.1741813265&semt=ais_hybrid",
-    },
+    
   ];
 
   return (

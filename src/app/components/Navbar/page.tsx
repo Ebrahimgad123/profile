@@ -1,20 +1,23 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; 
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from 'next/image';
-import logo from "../../../../public/Image/initial-linked-letter-ig-logo-design-vector-37373333.jpg"
-import './navbar.module.css'
+import logo from "../../../../public/Image/initial-linked-letter-ig-logo-design-vector-37373333.jpg";
 import { FaPagelines, FaInfoCircle, FaCogs, FaProjectDiagram, FaPhone } from "react-icons/fa";
+
 const menuItems = [
-  { name: "الصفحة الرئيسية", icon: <FaPagelines /> },
-  { name: "من نحن", icon: <FaInfoCircle /> },
-  { name: "الخدمات", icon: <FaCogs /> },
-  { name: "المشاريع", icon: <FaProjectDiagram /> },
-  { name: "اتصل بنا", icon: <FaPhone /> }
+  { name: "الصفحة الرئيسية", path: "/", icon: <FaPagelines /> },
+  { name: "من نحن", path: "/", icon: <FaInfoCircle /> },
+  { name: "الخدمات", path: "/tecnology", icon: <FaCogs /> },
+  { name: "المشاريع", path: "/projects", icon: <FaProjectDiagram /> },
+  { name: "اتصل بنا", path: "/contact", icon: <FaPhone /> }
 ];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <nav className="bg-gradient-to-r from-black to-purple-600 text-white p-5 shadow-lg fixed top-0 w-full z-50">
@@ -25,52 +28,51 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-       <Image
-            width={70} 
-            height={70} 
-            src={logo}
-            alt="Ibrahim Logo"
-          />
+          <Image width={70} height={70} src={logo} alt="Ibrahim Logo" />
         </motion.div>
 
+        {/* القائمة في الشاشات الكبيرة */}
         <div className="hidden md:flex space-x-8 text-lg cairo">
-          {["الصفحة الرئيسية", "من نحن", "الخدمات", "المشاريع", "اتصل بنا"].map((item, index) => (
-            <motion.a 
-              key={index} 
-              href={`#${item.toLowerCase()}`} 
+          {menuItems.map((item, index) => (
+            <motion.button 
+              key={index}
+              onClick={() => router.push(item.path)} 
               className="hover:text-gray-200 transition duration-300"
               whileHover={{ scale: 1.1 }}
             >
-              {item}
-            </motion.a>
+              {item.name}
+            </motion.button>
           ))}
         </div>
-        <button 
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden focus:outline-none"
-        >
+
+        {/* زر القائمة الجانبية */}
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden focus:outline-none">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
+
+      {/* القائمة الجانبية في الهاتف */}
       {isOpen && (
-       <motion.div 
-       className="cairo mt-6 md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-gray-900 bg-opacity-90 text-white flex flex-col items-center space-y-6 py-6"
-       initial={{ x: "100%", opacity: 0 }}
-       animate={{ x: "0%", opacity: 1 }}
-       transition={{ duration: 0.5, ease: "easeInOut" }}
-     >
-       {menuItems.map((item, index) => (
-         <a 
-           key={index} 
-           href={`#${item.name.toLowerCase()}`} 
-           className="flex items-center gap-2 text-lg hover:text-gray-300 transition duration-300 mb-[50px]"
-           onClick={() => setIsOpen(false)}
-         >
-           <span className="text-gray-400 text-xl">{item.icon}</span>
-           {item.name}
-         </a>
-       ))}
-     </motion.div>
+        <motion.div 
+          className="cairo mt-6 md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-purple-900 to-gray-900 bg-opacity-90 text-white flex flex-col items-center space-y-6 py-6"
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          {menuItems.map((item, index) => (
+            <button 
+              key={index}
+              onClick={() => {
+                router.push(item.path);
+                setIsOpen(false);
+              }}
+              className="flex items-center gap-2 text-lg hover:text-gray-300 transition duration-300 mb-[50px]"
+            >
+              <span className="text-gray-400 text-xl">{item.icon}</span>
+              {item.name}
+            </button>
+          ))}
+        </motion.div>
       )}
     </nav>
   );
