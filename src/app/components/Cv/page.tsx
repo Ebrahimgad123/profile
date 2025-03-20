@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 const Page = () => {
