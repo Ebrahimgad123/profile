@@ -4,6 +4,7 @@ const Page = () => {
   return (
     <main className="flex justify-center items-center h-[150px] bg-gradient-to-br bg-purple-600 ">
       <button
+          onClick={() => window.open("/Image/Ibrahim_Cv.pdf", "_blank")}
         type="button"
         className="bg-gradient-to-r to-yellow-500 from-yellow-900 text-white font-semibold px-10 py-5 rounded-md shadow-md hover:from-yellow-600 hover:to-red-700 transition duration-300 flex items-center"
       >
