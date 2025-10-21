@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from 'next/image';
-import logo from "../../../../public/Image/initial-linked-letter-ig-logo-design-vector-37373333.jpg";
+import logo from "../../../public/Image/myLogo.jpg";
 import { FaPagelines, FaInfoCircle, FaCogs, FaProjectDiagram, FaPhone } from "react-icons/fa";
 
 const menuItems = [
@@ -20,7 +20,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="bg-gradient-to-r from-black to-purple-600 text-white p-5 shadow-lg fixed top-0 w-full z-50">
+    <nav className="bg-gradient-to-r from-[#11120f] to-[#11120f] text-white p-5 shadow-lg fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <motion.div 
           className="text-2xl font-bold"

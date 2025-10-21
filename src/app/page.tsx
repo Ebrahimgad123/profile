@@ -1,29 +1,19 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Home from "../app/homeapp/page"
-
+import Home from "./home/page"
+import { CircleLoader } from "react-spinners";
 const Loader = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
       <motion.div
         className="relative flex justify-center items-center"
       >
-        <motion.span
-          className="absolute w-20 h-20 border-4 border-blue-500 border-t-transparent rounded-full"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-        ></motion.span>
-        <motion.span
-          className="absolute w-12 h-12 border-4 border-blue-300 border-t-transparent rounded-full"
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-        ></motion.span>
-        <motion.span
-          className="w-12 h-12 bg-blue-500 rounded-full"
-          animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-          transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-        ></motion.span>
+       <CircleLoader
+        size={150}
+        color="#6366F1"
+        loading={true}
+      />
       </motion.div>
      
     </div>

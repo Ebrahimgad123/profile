@@ -2,7 +2,7 @@
 import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const technologies = [
   {
     name: "MongoDB",
@@ -53,7 +53,7 @@ const technologies = [
   },
 ];
 
-const Page = () => {
+const Technology = () => {
   return (
     <>
       <Head>
@@ -83,7 +83,7 @@ const Page = () => {
           transition={{ duration: 0.6, delay: index * 0.15 }}
         >
           <div className="relative w-24 h-24 mb-4">
-            <img
+            <Image
               src={tech.image}
               alt={tech.name}
               width={96}
@@ -101,4 +101,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Technology;

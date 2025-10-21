@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Cv from "../components/Cv/page";
+import Cv from "../../components/Cv/page";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,10 +12,10 @@ import "swiper/css/pagination";
 import img1 from "../../../public/Image/logoo.jpg";
 import img2 from "../../../public/Image/logo2.jpg";
 import img3 from "../../../public/Image/pic_extended.jpg";
-import Navbar from "../components/Navbar/page";
-import Services from "../projects/page";
-import Technology from "../tecnology/page"
-import Contact from "../contact/page"
+import Navbar from "../../components/Navbar/page";
+import Projects from "../../components/Projects";
+import Technology from "../../components/Technology";
+import Contact from "../../components/Contact";
 const images = [img1, img2, img3];
 
 const desc = [
@@ -89,13 +89,13 @@ const Page = () => {
         <Cv />
       </div>
       <div>
-        <Services />
+        <Projects />
       </div>
       <div>
         <Technology />
       </div>
       <div>
-        <Contact />
+        <Contact/>
       </div>
     </div>
   );
